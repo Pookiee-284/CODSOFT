@@ -1,0 +1,27 @@
+from random import randint
+options = ["rock", "paper", "scissors"]
+while True:
+    computer = options[randint(0,2)]
+    player = input("rock ,paper or scissors?(enter end to end the game) \n")
+    if player == "end":
+        print("The game has ended \n")
+        break
+    elif player == computer:
+        print("Tie! \n")
+    elif player == "rock":
+        if computer == "paper":
+            print("you lose", computer,"beats",player)
+        else:
+            print("you win",player,"beats",computer)
+    elif player == "paper":
+        if computer == "scissors":
+            print("you lose", computer,"beats",player)
+        else:
+            print("you win", player,"beats",computer)
+    elif player == "scissors":
+        if computer == "rock":
+            print("you lose", computer,"beats",player)
+        else:
+            print("you win", player,"beats",computer)
+    else:
+        print("check your spelling... \n"
